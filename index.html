@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="Defense">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/index.js"></script>
+    <link href="css/index.css" type="text/css" rel="stylesheet"/>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body ng-controller="DefenseCtrl">
+    <div class="box-container">
+        <div ng-show="state==1">
+            <h2 class="title">CANYON<br/>DEFENSE</h2>
+            <div class="menu-container">
+                <button class="btn-play" ng-click="play()"><i class="fa fa-play play-icon"></i><span class="play-text"> PLAY</span></button><br/>
+                <button class="btn-help" ng-click="state=2"><i class="fa fa-question play-icon"></i><span class="play-text"> Help</span></button><br/>
+                <button class="btn-help" ng-click="state=3"><i class="fa fa-star play-icon"></i><span class="play-text"> Scores</span></button><br/>
+            </div>
+        </div>
+        <div ng-show="state==2">
+            <button class="btn-back" ng-click="state=1"><span class="play-text">Back</span></button>
+        </div>
+        <div ng-show="state==3">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="tmp in highScores">{{tmp.highScore}}<span class="pull-right">{{tmp.auth}}</span></li>
+            </ul>
+            <button class="btn-back" ng-click="state=1"><span class="play-text">Back</span></button>
+        </div>
+        <div ng-show="state==4">
+            <h2 class="title">SLECT DIFFICULTLY</h2>
+            <div class="menu-container">
+                <button class="btn-help" ng-click="state=5"><span class="play-text">EASY</span></button><br/>
+                <button class="btn-help" ng-click="state=5"><span class="play-text">NORMAL</span></button><br/>
+                <button class="btn-help" ng-click="state=5"><span class="play-text">HARD</span></button><br/>
+            </div>
+        </div>
+        <h2 ng-show="state==5" class="title">SELECT MAP</h2>
+        <div ng-show="state==5" class="img-item" ng-repeat="tmp in img">
+            <img class="mapImg" ng-src="{{tmp.src}}" ng-click="goToPlay(tmp.id)"/> 
+        </div>
+        <div ng-show="state==6" class="{{url}}">
+        
+        </div>
+        <div ng-show="state==6" class="menu-weapon">
+            <button>Basic</button>
+            <button>Advanced</button>
+            <button>Buildings</button>
+        </div>
+    </div>
+</body>
+</html>

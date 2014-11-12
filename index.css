@@ -1,0 +1,113 @@
+body{
+    background-image: url("../img/bg.jpg");
+}
+.box-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+.title{
+    color: #FFCC33;
+    text-align: center;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+}
+.menu-container{
+    position: absolute;
+    background-color: transparent;
+    width: 50%;
+    height: 40%;
+    left: 25%;
+    top: 50%;
+}
+.play-icon{
+    color: yellow;
+}
+.play-text{
+    color: black;
+    text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+}
+.btn-play{
+    margin-bottom: 10%;
+    width: 100%;
+    height: 20%;
+    background-color: #A0A0A0;
+    border-style: solid;
+    border-color: #383838;
+    box-shadow: 5px 5px 5px #707070 ;
+}
+.btn-help{
+    width: 80%;    
+    height: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    background-color: #A0A0A0;
+    border-style: solid;
+    border-color: #383838;
+    box-shadow: 5px 5px 5px #707070 ;
+}
+.btn-score{
+    width: 80%;    
+    height: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    background-color: #A0A0A0;
+    border-style: solid;
+    border-color: #383838;
+    box-shadow: 5px 5px 5px #707070 ;   
+}
+.btn-back{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background-color: #A0A0A0;
+    border-style: solid;
+    border-color: #383838;
+    box-shadow: 5px 5px 5px #707070 ;   
+}
+.img-item{
+    position: relative;
+    height: 30%;
+}
+.mapImg{
+    border-style: solid;
+    border-color: #404040;
+    border-width: 2px; 
+    position: absolute;
+    margin-left: 10%;
+    top: 10%;
+    height: 80%;
+}
+.img-container-map1{
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-image: url('../img/map1.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.img-container-map2{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/map2.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.img-container-map3{
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/map3.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.menu-weapon{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: black;
+}
