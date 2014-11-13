@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="Defense">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/angular.min.js"></script>
+	<script src="js/index.js"></script>
+	<link href="css/index.css" type="text/css" rel="stylesheet"/>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body ng-controller="PlayCtrl">
+	<div class="img-container">
+		<div ng-show="state==4">
+			<h2>SLECT DIFFICULTY</h2>
+			<div class="menu-container">
+				<button class="difficult"><span class="difficult-text">EASY</span></button>
+				<button class="difficult"><span class="difficult-text">NORMAL</span></button>
+				<button class="difficult"><span class="difficult-text">HARD</span></button>
+			</div>
+		</div>
+		<div ng-show="state==5" class="img-item" ng-repeat="tmp in img">
+        	<img class="mapImg" ng-src="{{tmp.src}}" ng-click="goToPlay(tmp.id)"/> 
+    	</div>
+		<div ng-show="state==6" class="{{url}}">
+			
+	    </div>
+
+    </div>
+</body>
+</html>
