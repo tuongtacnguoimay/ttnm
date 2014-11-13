@@ -14,18 +14,24 @@ body{
 }
 .menu-container{
     position: absolute;
-    background-color: transparent;
+    background-color: red;
     width: 50%;
-    height: 40%;
+    height: 50%;
     left: 25%;
     top: 50%;
 }
 .play-icon{
     color: yellow;
 }
-.play-text{
+.btn-text{
     color: black;
     text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+}
+.map-text{
+    color: white;
+}
+.info-text{
+    color: black;
 }
 .btn-play{
     margin-bottom: 10%;
@@ -69,16 +75,24 @@ body{
 }
 .img-item{
     position: relative;
-    height: 30%;
+    height: 25%;
+    border-style: solid;
+    border-color: #383838;
+       
 }
 .mapImg{
     border-style: solid;
-    border-color: #404040;
-    border-width: 2px; 
+    border-color: yellow;
+    border-width: 5px; 
     position: absolute;
     margin-left: 10%;
     top: 10%;
     height: 80%;
+}
+.mapInfo{
+    position: absolute;
+    top: 10%;
+    margin-left: 50%;
 }
 .img-container-map1{
     position: absolute;
@@ -112,21 +126,64 @@ body{
     background-color: #C0C0C0;
 }
 .img-weapon{
-    height: 50px;
-    width: 50px; 
+    width: 100%; 
 }
 .menu-type{
     position: absolute;
     height: 10%;
     bottom: 10%;
+    width: 70%;
 }
-.inf{
-    color: green;
-    text-shadow: -5px 0 red 0 5px red, 5px 0 red, 0 -5px red;
-}
-.menu-control{
+.menu-info{
+    width: 30%;
     position: absolute;
     top: 0;
     right: 0;
+    border-width: 2px;
+    border-left-width: 0;
+    border-style: solid;
+    border-color: #383838;
 }
-
+.menu-control{
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    width: 30%;
+    background-color: blue;   
+}
+.button-control{
+    width: 100%;;
+    margin-top: 10px;
+    background-color: #A0A0A0;
+    border-style: solid;
+    border-color: #383838;
+    box-shadow: 5px 5px 5px #707070 ;    
+}
+.item-inline{
+    width: 70%;
+    height: 70%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #383838;
+}
+.item-inline>div{
+    display: inline-block;
+    width: 25%;
+}
+.btn-type{
+    width: 32%;
+    background-color: #A0A0A0;
+    border-style: solid;
+    border-color: #383838;
+    box-shadow: 5px 5px 5px #707070 ;
+}
+.btn-pause{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+.btn-pplay{
+    position: absolute;
+    bottom: 10%;
+    right: 10%; 
+}

@@ -14,50 +14,56 @@
         <div ng-show="state==1">
             <h2 class="title">CANYON<br/>DEFENSE</h2>
             <div class="menu-container">
-                <button class="btn-play" ng-click="play()"><i class="fa fa-play play-icon"></i><span class="play-text"> PLAY</span></button><br/>
-                <button class="btn-help" ng-click="state=2"><i class="fa fa-question play-icon"></i><span class="play-text"> Help</span></button><br/>
-                <button class="btn-help" ng-click="state=3"><i class="fa fa-star play-icon"></i><span class="play-text"> Scores</span></button><br/>
+                <button class="btn-play" ng-click="play()"><i class="fa fa-play play-icon"></i><span class="btn-text"> PLAY</span></button><br/>
+                <button class="btn-help" ng-click="state=2"><i class="fa fa-question play-icon"></i><span class="btn-text"> Help</span></button><br/>
+                <button class="btn-help" ng-click="state=3"><i class="fa fa-star play-icon"></i><span class="btn-text"> Scores</span></button><br/>
             </div>
         </div>
         <div ng-show="state==2">
-            <button class="btn-back" ng-click="state=1"><span class="play-text">Back</span></button>
+            <button class="btn-back" ng-click="state=1"><span class="btn-text">Back</span></button>
         </div>
         <div ng-show="state==3">
             <ul class="list-group">
                 <li class="list-group-item" ng-repeat="tmp in highScores">{{tmp.highScore}}<span class="pull-right">{{tmp.auth}}</span></li>
             </ul>
-            <button class="btn-back" ng-click="state=1"><span class="play-text">Back</span></button>
+            <button class="btn-back" ng-click="state=1"><span class="btn-text">Back</span></button>
         </div>
         <div ng-show="state==4">
             <h2 class="title">SLECT DIFFICULTLY</h2>
             <div class="menu-container">
-                <button class="btn-help" ng-click="state=5"><span class="play-text">EASY</span></button><br/>
-                <button class="btn-help" ng-click="state=5"><span class="play-text">NORMAL</span></button><br/>
-                <button class="btn-help" ng-click="state=5"><span class="play-text">HARD</span></button><br/>
+                <button class="btn-help" ng-click="state=5"><span class="btn-text">EASY</span></button><br/>
+                <button class="btn-help" ng-click="state=5"><span class="btn-text">NORMAL</span></button><br/>
+                <button class="btn-help" ng-click="state=5"><span class="btn-text">HARD</span></button><br/>
             </div>
         </div>
         <h2 ng-show="state==5" class="title">SELECT MAP</h2>
         <div ng-show="state==5" class="img-item" ng-repeat="tmp in img">
-            <img class="mapImg" ng-src="{{tmp.src}}" ng-click="goToPlay(tmp.id)"/> 
+            <img class="mapImg" ng-src="{{tmp.src}}" ng-click="goToPlay(tmp.id)"/>
+            <span class="mapInfo map-text">{{tmp.info}}</span> 
         </div>
         <div ng-show="state==6" class="{{url}}">
         
         </div>
         <div ng-show="state==6" class="menu-weapon">
-                <ul class="list-inline">
-                    <li ng-show="type==1" ng-repeat="tmp in basic"><img class="img-weapon" src="{{tmp.src}}"/><br/><span class="info">Atack<br/>Price</span></li>
-                    <li ng-show="type==2" ng-repeat="tmp in advance"><img class="img-weapon" src="{{tmp.src}}"/><br/><span class="info">Atack<br/>Price</span></li>
-                    <li ng-show="type==3" ng-repeat="tmp in building"><img class="img-weapon" src="{{tmp.src}}"/><br/><span class="info">Price</span></li>
-                </ul>
+                <div class="item-inline">
+                    <div ng-show="type==1" ng-repeat="tmp in basic"><img class="img-weapon" src="{{tmp.src}}"/><br/><span class="info-text"><span class="fa fa-fighter-jet" style="color:red"></span> {{tmp.attack}}<br/><span class="fa fa-dollar" style="color:green"></span> {{tmp.price}}</span></div>
+                    <div ng-show="type==2" ng-repeat="tmp in advance"><img class="img-weapon" src="{{tmp.src}}"/><br/><span class="info-text"><span class="fa fa-fighter-jet" style="color:red"></span> {{tmp.attack}}<br/><span class="fa fa-dollar" style="color:green"></span> {{tmp.price}}</span></div>
+                    <div ng-show="type==3" ng-repeat="tmp in building"><img class="img-weapon" src="{{tmp.src}}"/><br/><span class="info-text"><span class="fa fa-dollar" style="color:green"></span> {{tmp.price}}</span></div>
+                </div>
             <div class="menu-type">
-                <button ng-click="type=1">Basic</button>
-                <button ng-click="type=2">Advanced</button>
-                <button ng-click="type=3">Buildings</button>
+                <button class="btn-type" ng-click="type=1">Basic</button>
+                <button class="btn-type" ng-click="type=2">Advanced</button>
+                <button class="btn-type" ng-click="type=3">Buildings</button>
             </div>
-            <div class="menu-control">
-                <span class="inf">HP: 100<br/>Price: {{price}}</span>
+            <div class="menu-info">
+                <div style="margin-left:10%">
+                    <span class="inf"><span class="fa fa-heart" style="color:red"></span> 100<br/><span class="fa fa-dollar" style="color:green"></span> {{price}}</span>
+                </div>
             </div>
+            <i class="fa fa-play fa-3x btn-pplay" style="color:green"></i>
         </div>
+        <i ng-show="state==6" class="fa fa-pause fa-2x btn-pause"></i>
+            
     </div>
 </body>
 </html>

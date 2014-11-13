@@ -1,73 +1,97 @@
 var app=angular.module('Defense',[]);
 app.controller('DefenseCtrl',function($scope,$window){
 	$scope.price=100;
+	$scope.type=1;
     $scope.state=1;
     $scope.highScores=[];
     $scope.img=[
 		{
 			id:'map1',
+			info:'New York',
 			src:'img/map1.jpg'
 		},
 		{
 			id:'map2',
+			info:'Los Angeles',
 			src:'img/map2.jpg'
 		},
 		{
 			id:'map3',
+			info:'New Orleans',
 			src:'img/map3.jpg'
 		}
 	];
 	$scope.basic=[
 		{
 			id:'bs1',
+			price:100,
+			attack:20,
 			src:'img/bs1.png'
 		},
 		{
 			id:'bs2',
+			price:150,
+			attack:20,
 			src:'img/bs2.png'
 		},
 		{
 			id:'bs3',
+			price:200,
+			attack:10,
 			src:'img/bs3.png'
 		},
 		{
 			id:'bs4',
+			price:200,
+			attack:40,
 			src:'img/bs4.png'
 		}
 	];
 	$scope.advance=[
 		{
 			id:'ad1',
+			price:500,
+			attack:100,
 			src:'img/ad1.png'
 		},
 		{
 			id:'ad2',
+			price:800,
+			attack:220,
 			src:'img/ad2.png'
 		},
 		{
 			id:'ad3',
+			price:800,
+			attack:200,
 			src:'img/ad3.png'
 		},
 		{
 			id:'ad4',
+			price:1000,
+			attack:250,
 			src:'img/ad4.png'
 		}
 	];
 	$scope.building=[
 		{
 			id:'b1',
+			price:500,
 			src:'img/b1.png'
 		},
 		{
 			id:'b2',
+			price:800,
 			src:'img/b2.png'
 		},
 		{
 			id:'b3',
+			price:900,
 			src:'img/b3.png'
 		},
 		{
 			id:'b4',
+			price:1250,
 			src:'img/b4.png'
 		}
 	];
