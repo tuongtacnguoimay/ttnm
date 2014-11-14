@@ -28,23 +28,27 @@
             </ul>
             <button class="btn-back" ng-click="state=1"><span class="btn-text">Back</span></button>
         </div>
-        <div ng-show="state==4">
+        <div ng-show="state==5">
             <h2 class="title">SLECT DIFFICULTLY</h2>
             <div class="menu-container">
-                <button class="btn-help" ng-click="state=5"><span class="btn-text">EASY</span></button><br/>
-                <button class="btn-help" ng-click="state=5"><span class="btn-text">NORMAL</span></button><br/>
-                <button class="btn-help" ng-click="state=5"><span class="btn-text">HARD</span></button><br/>
+                <button class="btn-help" ng-click="state=6"><span class="btn-text">EASY</span></button><br/>
+                <button class="btn-help" ng-click="state=6"><span class="btn-text">NORMAL</span></button><br/>
+                <button class="btn-help" ng-click="state=6"><span class="btn-text">HARD</span></button><br/>
             </div>
         </div>
-        <h2 ng-show="state==5" class="title">SELECT MAP</h2>
-        <div ng-show="state==5" class="img-item" ng-repeat="tmp in img">
-            <img class="mapImg" ng-src="{{tmp.src}}" ng-click="goToPlay(tmp.id)"/>
+        <h2 ng-show="state==4" class="title">SELECT MAP</h2>
+        <div ng-show="state==4" class="img-item" ng-repeat="tmp in img">
+            <img class="mapImg" ng-src="{{tmp.src}}" ng-click="selectMap(tmp.id)"/>
             <span class="mapInfo map-text">{{tmp.info}}</span> 
         </div>
-        <div ng-show="state==6" class="{{url}}">
-        
+        <div ng-show="state==6" class="{{url}}" style="height:{{width}}px">
+            <div class="img-block" style="height:{{width}}px">
+                <div ng-repeat="tmp in s" ng-click="demo(tmp)">
+                     
+                </div>
+            </div>
         </div>
-        <div ng-show="state==6" class="menu-weapon">
+        <div ng-show="state==6" class="menu-weapon" style="height:{{minus}}px">
                 <div class="item-inline">
                     <div ng-show="type==1" ng-repeat="tmp in basic"><img class="img-weapon" src="{{tmp.src}}"/><br/><span class="info-text"><span class="fa fa-fighter-jet" style="color:red"></span> {{tmp.attack}}<br/><span class="fa fa-dollar" style="color:green"></span> {{tmp.price}}</span></div>
                     <div ng-show="type==2" ng-repeat="tmp in advance"><img class="img-weapon" src="{{tmp.src}}"/><br/><span class="info-text"><span class="fa fa-fighter-jet" style="color:red"></span> {{tmp.attack}}<br/><span class="fa fa-dollar" style="color:green"></span> {{tmp.price}}</span></div>

@@ -1,9 +1,16 @@
 var app=angular.module('Defense',[]);
 app.controller('DefenseCtrl',function($scope,$window){
+	$scope.width=$window.innerWidth;
+	$scope.height=$window.innerHeight;
+	$scope.minus=$scope.height-$scope.width;
 	$scope.price=100;
 	$scope.type=1;
     $scope.state=1;
     $scope.highScores=[];
+    $scope.s=[];
+    for(var i=0;i<16;i++){
+    	$scope.s[i]=i;
+    }
     $scope.img=[
 		{
 			id:'map1',
@@ -102,9 +109,12 @@ app.controller('DefenseCtrl',function($scope,$window){
     $scope.play=function(){
     	$scope.state=4;
     }
-    $scope.goToPlay=function(id){
+	$scope.selectMap=function(id){
 		$scope.url='img-container-'+id;
-		$scope.state=6;		
+		$scope.state=5;
+	}
+	$scope.demo=function(tmp){
+		alert(tmp);
 	}
 });
 	
